@@ -9,7 +9,119 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%); /* White to light gray */
+            color: #000000; /* Black text */
+            font-family: 'Roboto', sans-serif;
+        }
+        .hero {
+            background: #333333; /* Dark gray */
+            color: #ffffff; /* White text */
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://via.placeholder.com/800x200?text=Monochrome+Pattern') no-repeat center center;
+            background-size: cover;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .profile-photo {
+            width: 151px; /* 4 cm */
+            height: 227px; /* 6 cm */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-right: 20px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #666;
+        }
+        .hero-text {
+            text-align: left; /* Left-aligned for name, address, and contacts */
+        }
+        .hero-contact {
+            margin-top: 10px;
+        }
+        .hero-contact a {
+            color: #ffffff; /* White links */
+            font-size: 1.2em;
+            display: block; /* Vertical stack */
+            margin-bottom: 5px;
+            transition: color 0.3s;
+        }
+        .hero-contact a:hover {
+            color: #cccccc; /* Light gray on hover */
+        }
+        .section {
+            background: #ffffff; /* White */
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            animation: fadeInUp 1s ease-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .summary p {
+            text-align: justify;
+        }
+        footer {
+            background: #000000; /* Black */
+            color: #ffffff; /* White */
+            padding: 10px 0;
+            text-align: center;
+        }
+        .skills .card {
+            transition: transform 0.3s;
+            border: 1px solid #666666; /* Gray border */
+            background: #f5f5f5; /* Light gray */
+        }
+        .skills .card:hover {
+            transform: translateY(-5px);
+        }
+        .skills .card-title {
+            color: #000000; /* Black */
+        }
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-photo {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            .hero-text {
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid">
